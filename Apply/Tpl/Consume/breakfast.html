@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section dl-food">
+		<h2>营养餐列表</h2>
+		<ul>
+			<volist name="breakfast" id="v">
+			<li>
+				<p><img src="__PUBLIC__/index/Images/consume/{$v.imgpath}"/></p>
+				<p><strong>名称</strong>：{$v.name}</p>
+				<p><strong>价格</strong>：￥{$v.price}</p>
+				<p><strong>功用</strong>：{$v.remark}</p>
+			</li>
+			</volist>
+		</ul>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		p{width:250px;margin:50px auto;text-align:center;line-height:100px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section">
+		<h2>业务办理</h2>
+		<div class="dl-checkin">
+			<p><img src="__PUBLIC__/index/images/signal.png" /><br/><br/><br/>请先将磁卡置于读卡器上！</p>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/index/js/jquery.js"></script>
+<script type="text/javascript">
+	setInterval(function(){
+		var urls=window.location.href.split('/');
+		var action = urls[urls.length-1];
+		$('.dl-main').load(action);
+	},2000);
+</script>
+</body>
+</html>

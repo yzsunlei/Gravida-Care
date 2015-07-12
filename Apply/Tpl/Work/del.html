@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		table{margin:15px auto;border:1px solid #ccc;text-align:center}
+		td{padding:5px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section dl-consume">
+		<h2>退房离开</h2>
+		<div class="dl-checkin">
+		<form method="post" action="{:U('Work/confirmdel')}">
+			<table width='400px' border='1' cellspacing="0" cellpadding="0" style="margin:15px auto;border:1px solid #ccc;text-align:center">
+				<input name="rfid"  type="hidden" value="{$gravida.rfid}"/>
+				<tr><td>RFID:</td><td>{$gravida.rfid}</td></tr>
+				<tr><td>姓名：</td><td>{$gravida.name}</td></tr>
+				<tr><td>房间号：</td><td>{$gravida.roomID}</td></tr>
+				<tr><td>护理人员：</td><td>{$gravida.serverID}</td></tr>
+				<tr><td>应退费用：</td><td><strong>￥{$gravida.money}</strong></td></tr>
+				<tr><td colspan="2"><input type="submit" value="确定退房"/></td></tr>
+			</table>
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

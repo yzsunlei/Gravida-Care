@@ -1,0 +1,41 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<html lang="en" class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <title>月子会所后台管理</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <!-- CSS -->
+        <link rel="stylesheet" href="__PUBLIC__/login/css/reset.css">
+        <link rel="stylesheet" href="__PUBLIC__/login/css/supersized.css">
+        <link rel="stylesheet" href="__PUBLIC__/login/css/login.css">
+
+        <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+        <!--[if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+
+    </head>
+
+    <body>
+
+        <div class="page-container">
+            <h1>月子会所后台管理</h1>
+            <form action="<?php echo U('index.php/Login/check');?>" method="post">
+                <input type="text" name="username" class="username" placeholder="Username">
+                <input type="password" name="password" class="password" placeholder="Password">
+                <button type="submit">登  入</button>
+                <div class="error"><span>+</span></div>
+            </form>
+			<p style="margin-top:20px;">默认用户名:admin&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;默认密码：123456</p>
+        </div>
+        <!-- Javascript -->
+        <script src="__PUBLIC__/login/js/jquery-1.8.2.min.js"></script>
+        <script src="__PUBLIC__/login/js/supersized.3.2.7.min.js"></script>
+        <script src="__PUBLIC__/login/js/supersized-init.js"></script>
+        <script src="__PUBLIC__/login/js/scripts.js"></script>
+
+    </body>
+
+</html>

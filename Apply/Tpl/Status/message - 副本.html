@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>月子会所后台管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class='dl-main'>
+	<div class='dl-section'>
+		<h2 class='msg'>消息记录</h2>
+		<div class='dl_msg'>
+			<ul>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+				<li>时间：6.13<strong>  孕妇00001发出呼叫</li>
+			</ul>
+		</div>
+	</div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/index/js/jquery.js"></script>
+<script type="text/javascript">
+$('document').ready(function(){
+	setInterval(function(){
+		//$('.dl-main').load('http://localhost/gravidacare/index.php/Status/message');
+		$('.dl-main').load('message');
+		$('.dl-section h2').html('消息记录loading..');
+	},3000);
+});
+</script>
+</body>
+</html>

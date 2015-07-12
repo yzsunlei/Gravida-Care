@@ -1,0 +1,17 @@
+	<div class="fl" style="width:320px;">	
+		<img src="__PUBLIC__/index/Images/nurse_<switch name='item.status'><case value='1'>online</case><default />offline</switch>.png"/>
+		<p><strong>编号: </strong>{$item['serverID']}</p>
+		<p><strong>姓名：</strong>{$item['name']}</p>
+		<p><strong>状态：</strong><switch name='item.status'><case value='10'>呼叫</case><case value='1'>在线</case><default />离线</switch></p>
+		<p><strong>电话：</strong>{$item['tel']}</p>
+		<p><strong>服务：</strong>{$item['duty']}</p>
+		<p><strong></strong></p>
+	</div>
+	<div class="fr" style="width:260px;margin-top:10px;">
+		<table width='260px' border='1' cellspacing="0" cellpadding="0" style="margin-top:15px;text-align:center;">
+			<tr><td colspan='8' style="text-align:center;">近七次的评分</td></tr>
+			<tr><td><strong>评分</strong>：</td><volist name="praise" id="item"><td>{$item['grade']!=1?$item['grade']:'+1'}</td></volist></tr>
+			<tr><td><strong>总评分</strong>：</td><td  colspan='7'>{$praiseAll}</td></tr>
+		</table>
+	</div>
+		<a href="#" onclick="closeMask();return false;" class="dl-show-close">关闭</a>

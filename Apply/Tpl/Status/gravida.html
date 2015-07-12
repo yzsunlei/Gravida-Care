@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>月子会所后台管理</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div class='dl-main'>
+	<div class='dl-section'>
+	<h2 name='pregnant'>孕妇列表</h2>
+	<volist name="gravida" id="item">
+		<div class='dl_servant'>
+			<a href="{:U('Status/showgravida')}/roomID/{$item.roomID}" onclick="showGravida(this.href);return false;"><img src="__PUBLIC__/index/Images/patient_<switch name='item.status'><case value='10'>call</case><case value='1'>online</case><default />offline</switch>.png"/></a>
+			<p>房号：{$item.roomID}</p>
+			<p>姓名：{$item.name}</p>
+			<p>状态：<switch name='item.status'><case value='10'>呼叫</case><case value='1'>在线</case><default />离线</switch></p>
+		</div>
+	</volist>
+	</div>
+	<div class="dl-alert">{$alert}</div>
+</div>
+
+<div class="dl-mask"><!--隐藏的遮罩层-->
+	<div class="dl-show-gravida">
+		#
+	</div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/index/js/jquery.js"></script>
+<script type="text/javascript">
+$('document').ready(function(){
+	if($('.dl-alert').text() != ''){
+		$('.dl-alert').fadeIn('normal');
+	}
+	setInterval(function(){
+		//$('.dl-main').load('http://localhost/gravidacare/index.php/Status/gravida/id/1');
+		$('.dl-main').load('gravida');
+	},3000);
+});
+
+function showGravida(href){ //显示孕妇信息
+	$('.dl-mask').show();
+	$('.dl-show-gravida').load(href);
+	$('.dl-show-gravida').show();
+}
+
+function closeMask(){ //关闭弹出信息
+	$('.dl-mask').hide();
+	$('.dl-show-gravida').hide();
+	$('.dl-show-servant').hide();
+}
+</script>
+</body>
+</html>

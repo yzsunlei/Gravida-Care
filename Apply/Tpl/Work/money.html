@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		table{margin:15px auto;border:1px solid #ccc;text-align:center}
+		td{padding:5px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section ">
+		<h2>办理充值</h2>
+		<form method="post" action="{:U('Work/confirmmoney')}">
+			<table width='400px' border='1' cellspacing="0" cellpadding="0">
+				<input name="rfid" type="hidden" value="{$gravida.rfid}"/>
+				<tr><td>RFID:</td><td>{$gravida.rfid}</td></tr>
+				<tr><td>姓名：</td><td>{$gravida.name}</td></tr>
+				<tr><td>电话号码：</td><td>{$gravida.tel}</td></tr>
+				<tr><td>房间号：</td><td>{$gravida.roomID}</td></tr>
+				<tr><td>护理人员：</td><td>{$gravida.serverID}</td></tr>
+				<tr><td>剩余费用：</td><td>￥{$gravida.money}</td></tr>
+				<tr><td>充值费用：</td><td><input name="money" type="text" value="0"/></td></tr>
+				<tr><td colspan="2"><input type="submit" value="确定充值"/></td></tr>
+			</table>
+		</form>	
+	</div>
+</div>
+</body>
+</html>

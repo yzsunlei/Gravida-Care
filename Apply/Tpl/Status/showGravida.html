@@ -1,0 +1,16 @@
+	<div class="fl" style="width:300px;">	
+		<img src="__PUBLIC__/index/Images/patient_<switch name='item.status'><case value='10'>call</case><case value='1'>online</case><default />offline</switch>.png"/>
+		<p><strong>房号：</strong>{$item['roomID']}</p>
+		<p><strong>姓名：</strong>{$item['name']}</p>
+		<p><strong>状态：</strong><switch name='item.status'><case value='10'>呼叫</case><case value='1'>在线</case><default />离线</switch></p>
+		<p><strong>入住时间：</strong>{$item['accesstime']|date="Y-m-d",###}</p>
+		<p><strong>护理人员：</strong>{$item['serverID']}</p>
+	</div>
+	<div class="fr" style="width:260px;margin-top:10px;">
+		<table width='260px' border='1' cellspacing="0" cellpadding="0" style="margin-top:15px;text-align:center;">
+			<tr><td colspan='8' style="text-align:center;">近七次的温湿度</td></tr>
+			<tr><td><strong>温度</strong>：</td><volist name="temp" id="item"><td>{$item.value}</td></volist></tr>
+			<tr><td><strong>湿度</strong>：</td><volist name="humi" id="item"><td>{$item.value}</td></volist></tr>
+		</table>
+	</div>
+	<a href="#" onclick="closeMask();return false;" class="dl-show-close">关闭</a>

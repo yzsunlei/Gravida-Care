@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		table{margin:15px auto;border:1px solid #ccc;text-align:center}
+		td{padding:5px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section ">
+		<h2>历史入住记录</h2>
+		<table width='700px' border='1' cellspacing="0" cellpadding="0">
+			<tr><td>id</td><td>姓名</td><td>房号</td><td>电话</td><td>护理师</td><td>费用</td><td>入住时间</td></tr>
+		<volist name="gravida" id="v">
+			<tr><td>{$v.id}</td><td>{$v.name}</td><td>{$v.roomID}</td><td>{$v.tel}</td><td>{$v.serverID}</td><td>￥{$v.money}</td><td>{$v.accesstime}</td></tr>
+		</volist>
+		</table>
+	</div>
+</div>
+</body>
+</html>

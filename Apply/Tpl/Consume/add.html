@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		table{margin:15px auto;border:1px solid #ccc;text-align:center}
+		td{padding:5px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section dl-consume">
+		<h2>添加消费分类</h2>
+		<div class="dl-checkin">
+			<form method="post" action="{:U('Consume/confirmadd')}">
+				<table width='400px' border='1' cellspacing="0" cellpadding="0" style="margin:15px auto;border:1px solid #ccc;text-align:center">
+					<tr><td>名称：</td><td><input name="name" type="text" value=""/></td></tr>
+					<tr><td>价格：</td><td><input name="price" type="text" value=""/></td></tr>
+					<tr><td>说明：</td><td><input name="remark" type="text" value=""/></td></tr>
+					<tr><td>类别：</td><td><input name="type" type="text" value="1为饮料类；2为早餐类" onfocus="this.value=''"/></td></tr>
+					<tr><td>图片：</td><td><input name="imgpath" type="text" value="" onfocus="this.value=''"/></td></tr>
+					<tr><td colspan="2"><input type="submit" value="确定添加"/></td></tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		table{margin:15px auto;border:1px solid #ccc;text-align:center}
+		td{padding:5px;}
+		select{width:173px;height:24px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section dl-consume">
+		<h2>护理师请假</h2>
+		<div class="dl-checkin">
+			<form method="post" action="{:U('Duty/confirmleave')}">
+				<table width='400px' border='1' cellspacing="0" cellpadding="0" style="margin:15px auto;border:1px solid #ccc;text-align:center">
+					<tr><td>请假人：</td><td><select name="leaveName" type="select"><volist name="leaveName" id="item"><option>{$item.name}</option></volist></select></td></tr>
+					<tr><td>代班人：</td><td><select name="replaceName" type="select"><volist name="replaceName" id="item"><option>{$item.name}</option></volist></select></td></tr>
+					<tr><td colspan="2"><input type="submit" value="确定请假"/></td></tr>
+				</table>
+			</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

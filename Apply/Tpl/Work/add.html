@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		table{margin:15px auto;border:1px solid #ccc;text-align:center}
+		td{padding:5px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section">
+		<h2>孕妇入住</h2>
+		<div class="dl-checkin">
+		<form method="post" action="{:U('Work/confirmadd')}">
+			<table width='400px' border='1' cellspacing="0" cellpadding="0" style="margin:15px auto;border:1px solid #ccc;text-align:center">
+				<tr><td>RFID:</td><td><input name="rfid" type="text" value="{$rfid.id}"/></td></tr>
+				<tr><td>姓名：</td><td><input name="name" type="text" value=""/></td></tr>
+				<tr><td>身份证：</td><td><input name="idcard" type="text" value=""/></td></tr>
+				<tr><td>电话号码：</td><td><input name="tel" type="text" value=""/></td></tr>
+				<tr><td>房间号：</td><td><input name="roomID" type="text" value="{$rfid.roomID}"/></td></tr>
+				<tr><td>护理人员：</td><td><input name="serverID" type="text" value=""/></td></tr>
+				<tr><td>充值费用：</td><td><input name="money" type="text" value="0"/></td></tr>
+				<tr><td colspan="2"><input type="submit" value="确定入住"/></td></tr>
+			</table>
+		</form>
+		</div>
+	</div>
+</div>
+</body>
+</html>

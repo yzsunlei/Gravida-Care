@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>月子照护后台管理</title>
+    <meta charset="UTF-8">
+	<link href="__PUBLIC__/index/assets/css/block.css" rel="stylesheet" type="text/css" />
+    <style type="text/css">
+		table{margin:15px auto;border:1px solid #ccc;text-align:center}
+		td{padding:5px;}
+    </style>
+</head>
+<body>
+<div class='dl-main'>
+	<div class="dl-section">
+		<h2>排班管理</h2>
+		<div class="dl-checkin">
+			<table width='700px' border='1' cellspacing="0" cellpadding="0" style="margin:15px auto;border:1px solid #ccc;text-align:center">
+				<tr><td colspan="4">已排班工作列表</td></tr>
+				<tr><td>id</td><td>工作日期</td><td>类型</td><td>工作人员</td></tr>
+				<volist name="servant" id="v">
+					<tr><td>{$v.id}</td><td>{$v.date|date="Y-m-d",###}</td><td><switch name='v.type'><case value='1'>早班</case><case value='2'>中班</case><case value='3'>晚班</case><default />出错</switch></td><td>{$v.result}</td></tr>
+				</volist>
+			</table>
+		</div>
+	</div>
+</div>
+</body>
+</html>
