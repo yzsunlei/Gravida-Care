@@ -9,15 +9,6 @@ return array(
         'USER_TYPE' => 2,
     ),
 	'URL_HTML_SUFFIX'    =>'',
-
-    //数据库配置
-	'DB_TYPE'=>'mysql',
-	'DB_HOST'=>'127.0.0.1',
-	'DB_NAME'=>'gravidacare',
-	'DB_USER'=>'root',
-	'DB_PWD'=>'123456',
-	'DB_PORT'=>'3306',
-	'DB_PREFIX'=>'',
 	
 	//跳转页面设置
 	//默认错误跳转对应的模板文件
